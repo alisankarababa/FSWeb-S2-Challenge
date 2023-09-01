@@ -225,8 +225,15 @@ manav = meyveler.concat(sebzeler);
 			4. elde edilen string döndürülecek
  */
 
-function emojileriDonustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function emojileriDonustur(msg, emojis) {
+  for (const key in emojis) {
+    if (emojis.hasOwnProperty(key)) {
+      const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const regex = new RegExp(escapedKey, "gi");
+      msg = msg.replaceAll(regex, emojis[key]);
+    }
+  }
+  return msg;
 }
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
