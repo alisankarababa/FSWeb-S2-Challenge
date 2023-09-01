@@ -167,8 +167,8 @@ function paragrafOlustur(arrArrStr, cbMakeCentence, cbMakeSentences) {
   return paragraph;
 }
 
-console.log("G2:");
-console.log(paragrafOlustur(cumleler, cumleKur, cumlelereDonustur));
+// console.log("G2:");
+// console.log(paragrafOlustur(cumleler, cumleKur, cumlelereDonustur));
 
 /* 	GÖREV 3:
 		Yukarıda isimleri sebzeler ve meyveler olan 2 dizi bulunmaktadır. Bu dizileri kullanarak aşağıdaki görevleri tamamlayın.
@@ -176,6 +176,12 @@ console.log(paragrafOlustur(cumleler, cumleKur, cumlelereDonustur));
  */
 //3a çözümü
 /* kodlar buraya */
+
+console.log("G3a:");
+// console.log(meyveler);
+meyveler.pop();
+meyveler.shift();
+// console.log(meyveler);
 
 /* 			3b.  Bir tavşan ve bir kirpi arkadaşlar sebzeler dizimizin peşine düştü. Tavşan => 🐇 , Kirpi=> 🦔 , 
 Tavşanla kirpi sebzeleri ele geçirmek için bir plan kurdular. Tavşan diziye önden saldıracak, kirpi ise 
@@ -185,6 +191,12 @@ Kirpiyi dizinin son elemanına ekleyin 🦔
 //3b çözümü
 /* kodlar buraya */
 
+//console.log("G3b:");
+//console.log(sebzeler);
+sebzeler.unshift("🐇");
+sebzeler.push("🦔");
+//console.log(sebzeler);
+
 /* 			3c. manav isminde bir dizi oluşturun.`meyveler` dizisi ilk elemanlara, `sebzeler` dizisi son 
 elemanlara denk gelecek şekilde, iki diziyi birleştirip sonucu manav dizisine aktarın. (.concat metodu)
  */
@@ -192,6 +204,9 @@ elemanlara denk gelecek şekilde, iki diziyi birleştirip sonucu manav dizisine 
 /* kodlar buraya */
 
 var manav;
+//console.log("G3c:");
+manav = meyveler.concat(sebzeler);
+//console.log(manav);
 
 /* 	GÖREV 4:
 		Yeni kurulmuş bir mesajlaşma startup firması atılan mesajları emojilerle zenginleştirmek istiyor. 
