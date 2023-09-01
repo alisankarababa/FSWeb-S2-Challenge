@@ -155,9 +155,20 @@ function cumlelereDonustur(arrArrStr, seperator = ",") {
 			6. Oluşturulan paragraf döndürülecek
 	*/
 
-function paragrafOlustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function paragrafOlustur(arrArrStr, cbMakeCentence, cbMakeSentences) {
+  const arr = cbMakeSentences(arrArrStr, " ");
+
+  let paragraph = "";
+
+  for (let i = 1; i < 10; i += 2) {
+    paragraph += cbMakeCentence(arr[i]);
+  }
+
+  return paragraph;
 }
+
+console.log("G2:");
+console.log(paragrafOlustur(cumleler, cumleKur, cumlelereDonustur));
 
 /* 	GÖREV 3:
 		Yukarıda isimleri sebzeler ve meyveler olan 2 dizi bulunmaktadır. Bu dizileri kullanarak aşağıdaki görevleri tamamlayın.
