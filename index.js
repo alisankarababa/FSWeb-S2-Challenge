@@ -133,9 +133,14 @@ bircumle = cumleKur("Ben ", "iyi ", "bir ", "yazılımcı ", "olacağım!");
 			5. Oluşturulan yeni dizi döndürülecek.
 	*/
 
-function cumlelereDonustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function cumlelereDonustur(arrArrStr, seperator = ",") {
+  return arrArrStr.map((item) => {
+    return item.join(seperator);
+  });
 }
+
+// console.log("G1:");
+// console.log(cumlelereDonustur(cumleler, " "));
 
 /* GÖREV 2:
 		paragrafOlustur fonksiyonuna aşağıdakileri uygulayın.
